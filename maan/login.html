@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<link rel="stylesheet" href="css/gg-css/main.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  #model-container {
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+  #generate-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .section-one{
+    width: 45%;
+  }
+  .section-two{
+    width: 45%;
+  }
+
+    </style>
+<body>
+
+
+  <div id="model-container">
+    <h1>Welcome to the Medium Model</h1>
+    <p>This is a medium-sized model representation.</p>
+    <button id="generate-button">Generate Output</button>
+  </div>
+  <div id="popup" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <img style="width: auto; height: 100px"
+       src="https://s3-alpha-sig.figma.com/img/0532/6c3f/9fcba6e06f77d3068e9ba75e2f93be37?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=myrA1RTWK9zv1~bz4oecE3b2IOBushc4Am6~nz9WJm9ljpZSnnEKHjdbbkIy8vuk2t~X2Vp5TZ8bAU-FCwjH4kHYFBPJLj20ARtI0VCDc3Fjou65zC3Fz~15l6YXm~B-nDYjVOSFshIq2iz1VvLJoCKz04V-setIeQ2Ze5u-Kt6Y1t~lO-T~vj-VBbdAfGpl8qbCOz8CMHLWF6py-TtXcXWOR7U6tZhLBm82B-xMb1ELLMDtoSyih9IgvI~BvyJDxtlcs9asoHn1wkZQWTjnRwzEzGcPxaZtyNAKdv67Y0EvZThPeLaMK8Bdcn5A23EUsxAR88ioK0V-08U9xE5~Ig__"
+       class="margin-auto flex-row" />
+       <div class="multipl-steps">
+       <form>
+       <section class="container-login flex-row">
+          <div class="flex-column gap-5 section-one">
+            <div>
+            <h1 class="label">تسجيل حساب جديد</h1>
+          </div>
+          <div>
+            <h1>الاسم</h1>
+            <div><input class="input-txt"></div>
+          </div>
+          <div>
+            <h1>رقم الجوال</h1>
+            <div class="flex-row gap-5">
+              <div class="width-22">
+                <select class="height-50M input-txt">
+                  <option>+967</option>
+              </select>
+            </div>
+            <div class="width-76"><input class="input-txt" placeholder="775752xxx"></div>
+        
+          </div>
+          </div>
+          <div class="margin-auto">
+            <button class="btn " type="submit"> تسجيل </button>
+          </div>
+          <div class="flex-column">
+            <h1 class="font-size-18 price-color margin-33M">المتابعة كزائز</h1>
+          </div>
+          </div>
+          <div class="flex-column section-two justify-content-space-between">
+            <div class=" margin-auto">
+            <div class="margin-auto">
+            <h1>مرحبا بك في</h1>
+          </div>
+          <div class="margin-auto">
+            <h1 class="font-weight-800 font-size-32 base-color">الحراج الرقمي</h1>
+          </div>
+        </div>
+        <div class="margin-auto">
+          <div class="margin-auto">
+          <h1>  لديك حساب مسبقا؟</h1>
+        </div>
+        <div class="margin-auto">
+          <h1 onclick="showNextForm()" class="font-weight-800  price-color">تسجيل الدخول </h1>
+        </div>
+      </div>
+          </div>
+          <div id="output"> </div>
+       </section>
+       
+
+      </form>
+    </div>
+     <div class="multipl-steps">
+      <form >
+        <section class="container-login flex-row">
+           <div class="flex-column gap-5 section-one">
+             <div>
+             <h1 class="label">تسجيل  الدخول</h1>
+           </div>
+      
+           <div>
+             <h1>رقم الجوال</h1>
+             <div class="flex-row gap-5">
+               <div class="width-22">
+                 <select class="height-50M input-txt">
+                   <option>+967</option>
+               </select>
+             </div>
+             <div class="width-76"><input class="input-txt" placeholder="775752xxx"></div>
+         
+           </div>
+           </div>
+           <div class="margin-auto">
+             <button class="btn " type="submit"> تسجيل الدخول </button>
+           </div>
+           <div class="flex-column">
+             <h1 class="font-size-18 price-color margin-33M">المتابعة كزائز</h1>
+           </div>
+           </div>
+           <div class="flex-column section-two justify-content-space-between">
+             <div class=" margin-auto">
+             <div class="margin-auto">
+             <h1>مرحبا بك في</h1>
+           </div>
+           <div class="margin-auto">
+             <h1 class="font-weight-800 font-size-32 base-color">الحراج الرقمي</h1>
+           </div>
+         </div>
+         <div class="margin-auto">
+           <div class="margin-auto">
+           <h1>  قم بإنشاء حساب لتنظم الينا</h1>
+         </div>
+         <div class="margin-auto">
+           <h1 onclick="showNextForm()"  class="font-weight-800  price-color">أنشاء حساب </h1>
+         </div>
+       </div>
+           </div>
+           <div id="output"> </div>
+        </section>
+        
+ 
+       </form>
+      </div>
+       
+    </div>
+  </div>
+</body>
+
+<script>
+  var tabs = document.getElementsByClassName('multipl-steps');
+  function hideAllTabsExceptFirst(e) {
+  for (var i = 1; i <= tabs.length; i++) {
+    if (tabs[i]) 
+    tabs[i].classList.add('hidden');
+  }
+}
+hideAllTabsExceptFirst();
+  // tabs.forEach(function(tabs) {
+  //   if(tabs.inde)
+  //   tabs.style.display = 'none';
+  // });
+  function showNextForm() {
+    var currentTab = event.target.closest('.multipl-steps');
+    // currentTab.style.display = 'none';
+    currentTab.classList.add('hidden');
+    var currentIndex = Array.from(tabs).indexOf(currentTab);
+    currentIndex++;
+
+    if (currentIndex >= tabs.length) {
+      currentIndex = 0;
+    }
+    var nextTabs = tabs[currentIndex];
+    nextTabs.classList.remove('hidden');
+    // nextTabs.style.display = 'block';
+    }
+</script>
+<script>
+  document.getElementById('generate-button').addEventListener('click', function() {
+// Generate output using the medium-sized model
+generateOutput()
+  .then(function(output) {
+    // Display the output in a pop-up
+    displayPopup(output);
+  })
+  .catch(function(error) {
+    console.log('An error occurred:', error);
+  });
+});
+
+document.getElementsByClassName('close')[0].addEventListener('click', function() {
+// Close the pop-up
+document.getElementById('popup').style.display = 'none';
+});
+
+function generateOutput() {
+return new Promise(function(resolve, reject) {
+  // Placeholder code for generating output
+  setTimeout((function() {
+    var output = 'Generated login model.';
+    resolve('');
+  }), 100);
+});
+}
+
+function displayPopup(output) {
+var popup = document.getElementById('popup');
+var outputElement = document.getElementById('output');
+outputElement.innerText = output;
+
+popup.style.display = 'block';
+}
+</script>
+</html>
